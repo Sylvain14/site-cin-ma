@@ -1,0 +1,269 @@
+/* scrollbar */
+::-webkit-scrollbar {
+  background-color: #151718;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #404142;
+}
+/* general */
+body {background-color: #1e2021;
+margin-top: 50px;
+user-select: none;
+position: relative;
+}
+/* Le popcorn qui bouge */
+@keyframes popcorn {
+  0%   {top: -15px;}
+  50%  {top: 15px;}
+  100% {top: -15px;}
+}
+.movingpopcorn {  
+  margin-right: 30px;
+  width: 120px;
+  position: relative;
+  animation: popcorn 3s infinite;
+  transform: rotate(45deg);
+  transition: 0.5s;
+}
+.movingpopcorn:hover {
+  transform: rotate(-45deg);
+}
+/* Le header */
+.header {
+  background: none !important;
+  text-align: center;
+  font-size: 30px;
+}
+.header span{
+  color: orange;
+}
+.header a:link{
+  color: #1c96b1;
+  text-decoration: none;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.header a:visited{
+  color: #1c96b1;
+  text-decoration: none;
+}
+.header a:hover{
+  color: #f0c82d;
+  text-decoration: none;
+  transition: 0.2s;
+}
+.header a img {
+  width: 25px;
+  height: 25px;
+}
+/* Footer */
+.boxfooter{
+  margin-left: 10em;
+  margin-right: 10em;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  }
+.footerleft{
+  color: white;
+  margin:auto;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.footermid{
+  color: orange;
+  margin:auto;
+  font-size: larger;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.footermid a img{
+  width: 15px;
+  height: 15px;
+}
+.footerright{
+  margin:auto;
+  color: orange;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.footerright a img{
+  width: 30px;
+  height: 30px;
+  transition: 0.3s;
+  margin-top: 5px;
+}
+.footerright a img:hover{
+  width: 30px;
+  height: 30px;
+  margin-bottom: 3px;
+  margin-top: 2px;
+}
+.footermid a:link{
+  color: #1c96b1;
+  text-decoration: none;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.footermid a:visited{
+  color: #1c96b1;
+  text-decoration: none;
+}
+.footermid a:hover{
+  color: #f0c82d;
+  text-decoration: none;
+  transition: 0.2s;
+}
+/* end footer */
+/* Images des films */
+.monimage{
+  width:auto;
+  height:auto;
+  margin: 6px;
+  object-fit: contain;
+  border: 2px solid #1e2021;
+  border-radius: 4px;
+  transition: 0.25s;
+  }
+.monimage:hover {
+    box-shadow: 0 0 5px 6px rgba(55, 158, 255, 0.5);
+    margin-bottom: -3px;
+    cursor: pointer
+  }
+.monparent{
+  margin-left: 10em;
+  margin-right: 10em;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  }
+/* TITLE EFFECT */
+@font-face {
+  font-family: neon;
+  src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);
+}
+h1 {
+  display: block;
+  text-align: center;
+}
+.neon {
+  font-family: neon;
+  color: #FB4264;
+  font-size: 9vw;
+  line-height: 9vw;
+  text-shadow: 0 0 3vw #F40A35;
+}
+.flux {
+  font-family: neon;
+  color: #426DFB;
+  font-size: 9vw;
+  line-height: 9vw;
+  text-shadow: 0 0 3vw #2356FF;
+}
+.neon {
+  animation: neon 1s ease infinite;
+  -moz-animation: neon 1s ease infinite;
+  -webkit-animation: neon 1s ease infinite;
+}
+@keyframes neon {
+  0%,
+  100% {
+    text-shadow: 0 0 1vw #FA1C16, 0 0 3vw #FA1C16, 0 0 10vw #FA1C16, 0 0 10vw #FA1C16, 0 0 .4vw #FED128, .5vw .5vw .1vw #806914;
+    color: #FED128;
+  }
+  50% {
+    text-shadow: 0 0 .5vw #800E0B, 0 0 1.5vw #800E0B, 0 0 5vw #800E0B, 0 0 5vw #800E0B, 0 0 .2vw #800E0B, .5vw .5vw .1vw #40340A;
+    color: #806914;
+  }
+}
+.flux {
+  animation: flux 2s linear infinite;
+  -moz-animation: flux 2s linear infinite;
+  -webkit-animation: flux 2s linear infinite;
+  -o-animation: flux 2s linear infinite;
+}
+@keyframes flux {
+  0%,
+  100% {
+    text-shadow: 0 0 1vw #1041FF, 0 0 3vw #1041FF, 0 0 10vw #1041FF, 0 0 10vw #1041FF, 0 0 .4vw #8BFDFE, .5vw .5vw .1vw #147280;
+    color: #28D7FE;
+  }
+  50% {
+    text-shadow: 0 0 .5vw #082180, 0 0 1.5vw #082180, 0 0 5vw #082180, 0 0 5vw #082180, 0 0 .2vw #082180, .5vw .5vw .1vw #0A3940;
+    color: #146C80;
+  }
+}
+/*end title effect*/
+/* javascript popup */
+.popupfilm {
+  background-color: #1e2021;
+  position: fixed;
+  width: 40em;
+  height: 40em;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 10px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #484949;
+  background-image: url(stellaranimation.svg);
+}
+.popupimg {
+  width:auto;
+  height: 400px;;
+  border: 5px;
+  border-radius: 10px;
+  box-shadow:
+    0 0 42px rgb(255, 123, 0),
+    0 0 82px rgb(255, 123, 0),
+    0 0 92px rgb(255, 123, 0);
+}
+.popuptext {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.popupclose {
+  margin-left: 90%;
+  margin-top: 4px;
+}
+.popupclose:hover{
+  opacity: 0.7;
+  transition: 0.1s;
+  cursor: pointer;
+}
+
+/* js end */
+/* Informations */
+.information{
+  border-top: 1px white solid;
+  border-bottom: 1px white solid;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+.information p{
+  text-align: center;
+  color: white;
+  font-size: xx-large;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+/* Contact */
+.contact{
+  border-top: 1px white solid;
+  border-bottom: 1px white solid;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+.contact p{
+  text-align: center;
+  color: white;
+  font-size: xx-large;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+/* Localisation */
+.localisation iframe{
+border-radius: 5%;
+margin: 0 auto;
+display: block;
+}
